@@ -1,7 +1,7 @@
 <h2>Carga cliente</h2>
 <form #form = "ngForm">
-    <select name="nombrecliente" #nombrecliente (change)="cargarClienteSelect()">
-        @for(cliente of arrayClientes; track cliente){
+    <select name="nombrecliente" #nombrecliente>
+        @for(cliente of arrayclientes; track cliente){
             <option value="{{cliente.idcliente}}">{{cliente.nombre}}</option>
         }
     </select>
