@@ -1,0 +1,30 @@
+<h1>Cartelera de películas</h1>
+@for (peli of arrayPeliculas; track peli) {
+    <!--
+    <ul>
+        <li>{{peli.Titulo}}</li>
+        <li>{{peli.Argumento}}</li>
+        <li>{{peli.Fecha_Estreno}}</li>
+        <li>{{peli.Director}}</li>
+        <li>{{peli.Duracion}}</li>
+        <li><iframe width="560" height="315" src="https://www.youtube.com/embed/'{{peli.Youtube}}'?si=1nobrO4lzDg3j0Bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></li>
+        <li>{{peli.Genero}}</li>
+        <li>{{peli.Pais}}</li>
+    </ul>
+    -->
+    <div class="card" style="width: 18rem;">
+        <img src="{{comic.imagen}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{peli.Titulo}}</h5>
+            <p class="card-text">{{peli.Argumento}}</p>
+            <p class="card-text">{{peli.Fecha_Estreno}}</p>
+            <p class="card-text">{{peli.Director}}</p>
+            <p class="card-text">{{peli.Duracion}}</p>
+            <p class="card-text">{{peli.Argumento}}</p>
+            <p class="card-text">{{peli.Genero}}</p>
+            <p class="card-text">{{peli.Pais}}</p>
+        </div>
+    </div>
+    
+}
+

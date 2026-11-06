@@ -1,0 +1,15 @@
+<h1>Padre números</h1>
+<h1 style="color: blue;">
+  La suma es: {{suma}}
+</h1>
+<form #form="ngForm">
+  Introduca un número:
+  <input type="number" name="cajanumero" #cajanumero/>
+  <button (click)="crearNumero()">
+    Nuevo número
+  </button>
+  @for (num of arraynumeros; track num) {
+    <app-hijo-numero-component [numero]="num"
+      (sumarNumero)="sumarNumero($event)"/>
+  }
+</form>

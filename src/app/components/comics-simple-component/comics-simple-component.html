@@ -1,0 +1,19 @@
+<h2>Comics simple</h2>
+<h3 style="color:blue">
+    Titulo: {{comic.titulo}}
+    </h3>
+<p>Descripción: {{comic.descripcion}}</p>
+<img src="{{comic.imagen}}" style="width: 400px; height: 250px"/>
+
+<button (click)="mostrarComics()">
+    Cargar comics
+</button>
+<table border="1">
+@for(tebeo of arrayComics; track tebeo){
+    <tr>
+        <td style="color:blue">Titulo: {{tebeo.titulo}}</td>
+        <td>Descripción: {{tebeo.descripcion}}</td>
+        <td><img src="{{tebeo.imagen}}" style="width: 150px; height: 250px"/></td>
+    </tr>
+}
+</table>

@@ -1,0 +1,25 @@
+<h2>Carga cliente</h2>
+<form #form = "ngForm">
+    <select name="nombrecliente" #nombrecliente (change)="cargarClienteSelect()">
+        @for(cliente of arrayClientes; track cliente){
+            <option value="{{cliente.idcliente}}">{{cliente.nombre}}</option>
+        }
+    </select>
+</form>
+    
+    <!--Introduzca un ID de cliente
+    <input type="text" name="idCliente" #idCliente/><br/>
+    <button (click)="cargarCliente()">
+        Cargar cliente
+    </button>
+</form>
+Compruebo si ya hay cliente para solo pintar si hay cliente-->
+@if (cliente) {
+    <h1 style="color: blue;">
+        {{cliente.nombre}}
+    </h1>
+    <p>{{cliente.paginaweb}}</p>
+    <img src="{{cliente.imagencliente}}" 
+        style="width: 150px; height: 250px"/>
+}
+
