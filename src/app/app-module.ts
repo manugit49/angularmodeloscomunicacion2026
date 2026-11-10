@@ -34,7 +34,7 @@ import { PeliculaComponent } from './components/pelicula-component/pelicula-comp
     PadreNumerosComponent,
     HijoNumeroComponent,
     CineComponent,
-    PeliculaComponent,
+    PeliculaComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
