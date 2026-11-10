@@ -9,11 +9,23 @@ import { Pelicula } from '../../models/pelicula';
 })
 export class CineComponent implements OnInit {
   arrayPeliculas: Pelicula[] = [];
-
+  peliculaSeleccionada!: Pelicula;
+  
   constructor(
     private _cdr: ChangeDetectorRef
   )
   {}
+
+  seleccionarPelicula(pelicula: Pelicula): void {
+    //la pelicula seleccionada sera el objeto pelicula entero pasado
+    console.log(pelicula);
+    this.peliculaSeleccionada = pelicula;
+    console.log(this.peliculaSeleccionada);
+
+    
+    this._cdr.detectChanges();
+  }
+
 
   async ngOnInit(): Promise<void> {
     //Ruta con la que se encuentra el archivo JSON de cine.json

@@ -1,0 +1,9 @@
+/*clase componente-padre mostrar el componente a la izquierda de la pantalla*/
+.contenedor-principal{
+    display: flex;
+}
+
+
+.componente-hijo{
+    flex: 1;
+}
